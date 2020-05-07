@@ -1,0 +1,2165 @@
+{
+	"info": {
+		"_postman_id": "68676860-3da8-45a3-b35b-d4d1b1e6671c",
+		"name": "D2X new",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signin | ล็อกอิน",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"signInfo\": \"admin\", \n\t\"password\": \"123456\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{sv}}/auth/signin",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup | สมัครสมาชิก",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"hama89700@gmail.com\",\n    \"username\": \"hama897\",\n    \"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/auth/signup",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshtoken | รีโทเคน",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjM1LCJlbWFpbCI6ImhhbWE4OTcwMEBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiZm5hbWUiOm51bGwsImxuYW1lIjpudWxsLCJyb2xlIjowLCJpYXQiOjE1ODMzOTY3MjksImV4cCI6MTU4MzU2OTUyOX0.mJMM8ytBC3_2sGM69WBcFrleQmIUb8S1_blt0LnxWHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{lc}}/auth/refreshtoken",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"auth",
+								"refreshtoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign_token | ล็อกอินกับโทเคน",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODQ1NTYzNjcsImV4cCI6MTU4NDcyOTE2N30.VBBBl7xfsWsIoAVWvK8-mj0o_FrCz_4Ts04r-HDuxEI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{sv}}/auth/sign_token",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"auth",
+								"sign_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout | ออกจากระบบ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjM1LCJlbWFpbCI6ImhhbWE4OTcwMEBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiZm5hbWUiOm51bGwsImxuYW1lIjpudWxsLCJyb2xlIjowLCJpYXQiOjE1ODMzOTY5NjcsImV4cCI6MTU4MzU2OTc2N30.Kt7WrwfG3nB7j5e7zAW_4yufjOL0sNwyo48aL3tiBHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{lc}}/auth/signout",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot | กำลังแก้ไข",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"hama8970s@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/auth/forgot",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"auth",
+								"forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chagnepassword | กำลังแก้ไข",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"hama897s00@gmail.com\",\n\t\"password\":\"123456\",\n\t\"newPass\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/auth/changepassword",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"auth",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "login : /signin ; req {user, pass}\nregister : /signup ; req {user, pass, email}\nforgot : /forgot ; req {email}\ngetme : /me ; res {user, email, adress, phone}\n",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "create product | สร้างสินค้า",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"tessssst\",\n\t\"photo\":\"shttps://d2xapi.medizerva.com/product/img/2nlup4vmb9z6gdq6n3ehdx-1571609593806.jpg\",\n\t\"sold\":\"15\",\n\t\"price\":15,\n\t\"description\":\"\",\n\t\"category\":\"ยาเม็ด\",\n\t\"quantity\":\"\",\n\t\"company\":\"Rabiron DSR\",\n\t\"disease_id\" : 24\n\t\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/product/",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImgWithUrl | ดึงไฟล์รูป",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{d2x}}/product/img/3brqlu58vekn2dlg3wjww-1569765247088.jpg",
+							"host": [
+								"{{d2x}}"
+							],
+							"path": [
+								"product",
+								"img",
+								"3brqlu58vekn2dlg3wjww-1569765247088.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProduct | แสดงสินค้าทั้งหมด",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/product/",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImg | อัปโหลดรูป",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOiI2OS8xIOC4oSAyIiwicGhvbmUiOiIwODA4NzI0NTI0IiwiZm5hbWUiOiJhaXIiLCJsbmFtZSI6ImhhbWEiLCJyb2xlIjoxLCJpYXQiOjE1ODMyNjc5NzUsImV4cCI6MTU4MzQ0MDc3NX0.Rtz64bgm3c82npqksUgYaxjq9fwQeT5LwJ1lTDUgVKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/air/Pictures/Extensions.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lc}}/product/upload",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"product",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct | อัพเดพ สินค้า",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"1\",\n\t\"name\":\"ABC\",\n\t\"photo\":\"https://d2xapi.medizerva.com/product/img/3brqlu58vekn2dlg3wjww-1569765247088.jpg\",\n\t\"sold\":1,\n\t\"price\":0,\n\t\"description\":\"A\",\n\t\"category\":\"A\",\n\t\"quantity\":\"A\",\n\t\"company\":\"A\",\n\t\"help\" :\"A\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/product/",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct | ลบสินค้า",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{lc}}/product/1",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "costomer",
+			"item": [
+				{
+					"name": "addimgpaymentinorder | เพิ่มสลิปในออเดอร์",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"img\" : \"ttps://d2xapi.medizerva.com/customer/payment/img/00vjck9e1ycgeq2mgmwf27l-1578836758149.jpg\",\n\t\"order_id\" : \"#66\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/customer/payment",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"customer",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadimgpayment | อัปโหลดสลิป",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOiI2OS8xIOC4oSAyIiwicGhvbmUiOiIwODA4NzI0NTI0IiwiZm5hbWUiOiJhaXIiLCJsbmFtZSI6ImhhbWEiLCJyb2xlIjoxLCJpYXQiOjE1ODMyNjc5NzUsImV4cCI6MTU4MzQ0MDc3NX0.Rtz64bgm3c82npqksUgYaxjq9fwQeT5LwJ1lTDUgVKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/air/Pictures/Extensions.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lc}}/customer/payment/img",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"customer",
+								"payment",
+								"img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage | เปลี่ยนสถานะออเดอร์",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status\" : 4, \n\t\"type\" : \"admin\",\n\t\"order_id\" : \"#57\" \n\t\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/customer/manage",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"customer",
+								"manage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create order | สร้างออเดอร์",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjM1LCJlbWFpbCI6ImhhbWE4OTcwMEBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiZm5hbWUiOm51bGwsImxuYW1lIjpudWxsLCJyb2xlIjowLCJpYXQiOjE1ODMzOTY5NjcsImV4cCI6MTU4MzU2OTc2N30.Kt7WrwfG3nB7j5e7zAW_4yufjOL0sNwyo48aL3tiBHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im40c3giLCJzdWIiOjIsImVtYWlsIjoibnNvb29vb29vb29vc25AZ21haWwuY29tIiwiYWRkcmVzcyI6IjgwIEthdGh1IFBodWtldCA4MzEyMCIsInBob25lIjoiMDk5NTIxODQ1OSIsImZuYW1lIjoiTmF0dGFwb24iLCJsbmFtZSI6Ikx1ZWFrYWV3Iiwicm9sZSI6MCwiaWF0IjoxNTc5Mzk0MTY1LCJleHAiOjE1Nzk1NjY5NjV9.LRjgb6r6sk7gxxun2VQkar7pXlKlBJrrDhGI8hc20Nc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product\" : \n\t\t[{\n\t\t\t\"product_id\" : \"1\",\n\t\t\t\"count\" : \"5\"\n\t\t},\n\t\t{\n\t\t\t\"product_id\" : \"2\",\n\t\t\t\"count\" : \"100\"\n\t\t}]\n\t,\n\t\"address\" : \"หกฟหกฟหกฟหกหก\",\n\t\"phonenumber\": \"12312312\",\n\t\"delivery\":\"30\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/customer/order",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"customer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMyOrderCustomer | ดึงออเดอร์ของตัวเองทั้งหมด",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjM1LCJlbWFpbCI6ImhhbWE4OTcwMEBnbWFpbC5jb20iLCJhZGRyZXNzIjpudWxsLCJwaG9uZSI6bnVsbCwiZm5hbWUiOm51bGwsImxuYW1lIjpudWxsLCJyb2xlIjowLCJpYXQiOjE1ODMzOTY5NjcsImV4cCI6MTU4MzU2OTc2N30.Kt7WrwfG3nB7j5e7zAW_4yufjOL0sNwyo48aL3tiBHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im40c3giLCJzdWIiOjIsImVtYWlsIjoibnNvb29vb29vb29vc25AZ21haWwuY29tIiwiYWRkcmVzcyI6IjgwIEthdGh1IFBodWtldCA4MzEyMCIsInBob25lIjoiMDk5NTIxODQ1OSIsImZuYW1lIjoiTmF0dGFwb24iLCJsbmFtZSI6Ikx1ZWFrYWV3Iiwicm9sZSI6MCwiaWF0IjoxNTc5Mzk0MTY1LCJleHAiOjE1Nzk1NjY5NjV9.LRjgb6r6sk7gxxun2VQkar7pXlKlBJrrDhGI8hc20Nc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{lc}}/customer/all",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"customer",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get user | ดึงสมาชิกทั้งหมด",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOiI2OS8xIOC4oSAyIiwicGhvbmUiOiIwODA4NzI0NTI0IiwiZm5hbWUiOiJhaXIiLCJsbmFtZSI6ImhhbWEiLCJyb2xlIjoxLCJpYXQiOjE1ODMyNjc5NzUsImV4cCI6MTU4MzQ0MDc3NX0.Rtz64bgm3c82npqksUgYaxjq9fwQeT5LwJ1lTDUgVKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/admin/users",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change privilege | เปลี่ยนสิทธิสมาชิก",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOiI2OS8xIOC4oSAyIiwicGhvbmUiOiIwODA4NzI0NTI0IiwiZm5hbWUiOiJhaXIiLCJsbmFtZSI6ImhhbWEiLCJyb2xlIjoxLCJpYXQiOjE1ODMyNjc5NzUsImV4cCI6MTU4MzQ0MDc3NX0.Rtz64bgm3c82npqksUgYaxjq9fwQeT5LwJ1lTDUgVKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"n4sx\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/admin/privilege",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"privilege"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all order | ดึงออเดอร์ทั้งหมด",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSDguKfguLTguIrguLTguJXguKrguIfguITguKPguLLguKEg4LiVLuC4geC4sOC4l-C4ueC5iSDguK0u4LiB4Liw4LiX4Li54LmJIOC4iC7guKDguLnguYDguIHguYfguJUgODMxMjAiLCJwaG9uZSI6IjA5OTk5OTk5OTkiLCJmbmFtZSI6IkFkbWluIiwibG5hbWUiOiJNYW5hZ2UiLCJyb2xlIjoxLCJpYXQiOjE1Nzg5Nzg5OTEsImV4cCI6MTU3OTE1MTc5MX0.it1EOBorol6CpAlT6t81bOhczRGy8N5vtPs_fpnUugw"
+							}
+						],
+						"url": {
+							"raw": "{{lc}}/admin/order/all",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"order",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one order | ดึงออเดอร์ตามรหัสออเดอร์",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOiI2OS8xIOC4oSAyIiwicGhvbmUiOiIwODA4NzI0NTI0IiwiZm5hbWUiOiJhaXIiLCJsbmFtZSI6ImhhbWEiLCJyb2xlIjoxLCJpYXQiOjE1ODMyNjc5NzUsImV4cCI6MTU4MzQ0MDc3NX0.Rtz64bgm3c82npqksUgYaxjq9fwQeT5LwJ1lTDUgVKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"order\":\"#31\"\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/admin/order",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order by status | ดึงออเดอร์ตามสถานะ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSDguKfguLTguIrguLTguJXguKrguIfguITguKPguLLguKEg4LiVLuC4geC4sOC4l-C4ueC5iSDguK0u4LiB4Liw4LiX4Li54LmJIOC4iC7guKDguLnguYDguIHguYfguJUgODMxMjAiLCJwaG9uZSI6IjA5OTk5OTk5OTkiLCJmbmFtZSI6IkFkbWluIiwibG5hbWUiOiJNYW5hZ2UiLCJyb2xlIjoxLCJpYXQiOjE1Nzg5Nzg5OTEsImV4cCI6MTU3OTE1MTc5MX0.it1EOBorol6CpAlT6t81bOhczRGy8N5vtPs_fpnUugw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status_id\" : 0\n}"
+						},
+						"url": {
+							"raw": "{{lc}}/admin/order/bystatus",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"order",
+								"bystatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create map | สร้างแมพยากับโรค | สร้างทับ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODY4ODAxNDMsImV4cCI6MTU4NzA1Mjk0M30.vaPJ4Cgu-EKiKjya9SKSl5WHTIQwFizoHkzpMzmzQQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"disease_id\" : 24,\n\t\"symptom_id\" : 42,\n\t\"product_id\" : [ 4]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/admin/map",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"map"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detele map | ลบแมพยากับโรค Copy Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODY4ODAxNDMsImV4cCI6MTU4NzA1Mjk0M30.vaPJ4Cgu-EKiKjya9SKSl5WHTIQwFizoHkzpMzmzQQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"symptom_id\" : 42\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/admin/map",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"map"
+							]
+						},
+						"description": "เอา map_id เป็นตัวหา และสองค่านั้นถ้าเปลี่ยนก็จะอัปเดต ถ้าไม่อัปเดตส่งค่าเดิมมา"
+					},
+					"response": []
+				},
+				{
+					"name": "get map | ดึงข้อมูลแมพยากับโรค",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODY4ODAxNDMsImV4cCI6MTU4NzA1Mjk0M30.vaPJ4Cgu-EKiKjya9SKSl5WHTIQwFizoHkzpMzmzQQA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/admin/map/42/24",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"admin",
+								"map",
+								"42",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "chart",
+			"item": [
+				{
+					"name": "By day | ต่อวัน",
+					"item": [
+						{
+							"name": "Get one | ดึงมากราฟมาชนิดอย่างเดียว",
+							"item": [
+								{
+									"name": "get symtom only now by day | ดึงกราฟอาการวันนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 31\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/symptom/now/d",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"symptom",
+												"now",
+												"d"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get general only now by day | ดึงกราฟข้อมูลทั่วไปวันนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/general/now/d",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"general",
+												"now",
+												"d"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get product only now by day | ดึงกราฟสินค้าวันนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/product/now/d",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"product",
+												"now",
+												"d"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get user only now by day | ดึงกราฟผู้ใช้วันนี้เท่านั้น",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{lc}}/chart/user/now/d",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"user",
+												"now",
+												"d"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get order only now by day | ดึงกราฟการสั่งซื้อวันนี้เท่านั้น",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{lc}}/chart/order/now/d",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"order",
+												"now",
+												"d"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get all now by day | ดึงข้อมูลทุกอย่างในวันนี้เท่านั้น",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"disease_id\" : 21\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lc}}/chart/all/now/d",
+									"host": [
+										"{{lc}}"
+									],
+									"path": [
+										"chart",
+										"all",
+										"now",
+										"d"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "By day in mouth | มาในรูปแบบวันแต่เป็นเดือน",
+					"item": [
+						{
+							"name": "Get one | ดึงมากราฟมาชนิดอย่างเดียว",
+							"item": [
+								{
+									"name": "get symtom only now by mouth | ดึงกราฟอาการเดือนนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/symptom/now/m",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"symptom",
+												"now",
+												"m"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get general only now by mouth | ดึงกราฟข้อมูลทั่วไปเดือนนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/general/now/m",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"general",
+												"now",
+												"m"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get product only now by mouth | ดึงกราฟสินค้าเดือนนี้เท่านั้น",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/product/now/m",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"product",
+												"now",
+												"m"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get user only now by mouth | ดึงกราฟผู้ใช้เดือนนี้เท่านั้น",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{lc}}/chart/user/now/m",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"user",
+												"now",
+												"m"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get order only now by mouth| ดึงกราฟการสั่งซื้อเดือนนี้เท่านั้น",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{sv}}/chart/order/now/m",
+											"host": [
+												"{{sv}}"
+											],
+											"path": [
+												"chart",
+												"order",
+												"now",
+												"m"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "all day in mouth  | ดึงทุกวันในเดือนนี้",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"disease_id\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{lc}}/chart/all/now/m",
+									"host": [
+										"{{lc}}"
+									],
+									"path": [
+										"chart",
+										"all",
+										"now",
+										"m"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "By Year",
+					"item": [
+						{
+							"name": "Get one | ดึงมากราฟมาชนิดอย่างเดียว",
+							"item": [
+								{
+									"name": "get user 12 mouth | ดึงข้อมูลผู้ใช้ 12 เดือน ย้อนหลัง ",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{lc}}/chart/user/now/y",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"user",
+												"now",
+												"y"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get orfer 12 mouth | ดึงข้อมูลออเดอร์ 12 เดือน ย้อนหลัง",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{lc}}/chart/order/now/y",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"order",
+												"now",
+												"y"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get product 12 mouth | ดึงข้อมูลสิ้นค้า 12 เดือน ย้อนหลัง Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 21\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/product/now/y",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"product",
+												"now",
+												"y"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get general 12 mouth | ดึงข้อมูลทั่วไป 12 เดือนย้อนหลัง",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/general/now/y",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"general",
+												"now",
+												"y"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get symptom 12 mouth | ดึงข้อมูลอาการ 12 เดือนย้อนหลัง",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"disease_id\" : 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{lc}}/chart/symptom/now/y",
+											"host": [
+												"{{lc}}"
+											],
+											"path": [
+												"chart",
+												"symptom",
+												"now",
+												"y"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "all  mouth in 12 mouth last  | ดึงทุกเดือรใน 12 เดือนย้อนหลัง",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"disease_id\" : 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{sv}}/chart/all/now/y",
+									"host": [
+										"{{sv}}"
+									],
+									"path": [
+										"chart",
+										"all",
+										"now",
+										"y"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "mockData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product\" :[1,3,4,6,2,5,7],\n\t\"products\" :[9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],\n\t\"date\" : \"14/03/2020\",\n\t\"chart_m_id\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/chart/mock",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"chart",
+								"mock"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "editall | แก้ไขข้อมูลผู้ใช้ทั้งหมก",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsInBob25lIjpudWxsLCJmbmFtZSI6bnVsbCwibG5hbWUiOm51bGwsInJvbGUiOjAsImlhdCI6MTU4MzI1NzA3MiwiZXhwIjoxNTgzNDI5ODcyfQ.2bUQQaM3jFGohQl5WORs5nsmhuqciU0rdYMLfoUOseU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fname\" : \"ismael\",\n\t\"lname\" : \"hama\",\n\t\"address\" : \"69/1 ม 2\",\n\t\"phonenumber\" : \"0808724524\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/user/editall",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"user",
+								"editall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit data user somesone | แก้ไขข้อมูลบางอย่างผู้ใช้",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFpciIsImxuYW1lIjoiaGFtYSIsInJvbGUiOjEsImlhdCI6MTU4MzI2MjQ0NCwiZXhwIjoxNTgzNDM1MjQ0fQ.8uW0rsnbOfFXjNvILwwGu35M-ssYoiR49c4uyHLXt1c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\" : \"lname\",\n\t\"data\" : \"ismael\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sv}}/user/edit",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"user",
+								"edit"
+							]
+						},
+						"description": "สามารถเปลี่ยนได้ไม่ทั้งหมด typeที่สามารถเปลี่ยนได้มีทั้งนี้\n \"type\":\"fname\",\n \"type\":\"lname\",\n \"type\":\"address\",\n \"type\":\"phonenumber\","
+					},
+					"response": []
+				},
+				{
+					"name": "add disease | เพิ่มอาการผิดหรือของที่แพ้",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsInBob25lIjpudWxsLCJmbmFtZSI6bnVsbCwibG5hbWUiOm51bGwsInJvbGUiOjAsImlhdCI6MTU4MzI1NzA3MiwiZXhwIjoxNTgzNDI5ODcyfQ.2bUQQaM3jFGohQl5WORs5nsmhuqciU0rdYMLfoUOseU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"diseases\" : [\"ไข้หวัด\",\"แพ้กุ้ง\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/user/editdisease",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"user",
+								"editdisease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload img | อัปโหลดรูป",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsInBob25lIjpudWxsLCJmbmFtZSI6bnVsbCwibG5hbWUiOm51bGwsInJvbGUiOjAsImlhdCI6MTU4MzI1NzA3MiwiZXhwIjoxNTgzNDI5ODcyfQ.2bUQQaM3jFGohQl5WORs5nsmhuqciU0rdYMLfoUOseU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/air/Pictures/Extensions.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lc}}/user/upload",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"user",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get img | ดึงไฟล์รูป",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/user/img/let4bgyedmp3hti8f7edmk-1583259464043.jpg",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"user",
+								"img",
+								"let4bgyedmp3hti8f7edmk-1583259464043.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add photo in user | เอารูปเพิ่มในผู้ใช้",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbWE4OTciLCJzdWIiOjEsImVtYWlsIjoiaGFtYTg5NzAwQGdtYWlsLmNvbSIsImFkZHJlc3MiOm51bGwsInBob25lIjpudWxsLCJmbmFtZSI6bnVsbCwibG5hbWUiOm51bGwsInJvbGUiOjAsImlhdCI6MTU4MzI1NzA3MiwiZXhwIjoxNTgzNDI5ODcyfQ.2bUQQaM3jFGohQl5WORs5nsmhuqciU0rdYMLfoUOseU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"photo\" : \"http://localhost:8000/product/user/let4bgyedmp3hti8f7edmk-1583259464043.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/user/photo",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"user",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "backend | API ภายใน",
+			"item": [
+				{
+					"name": "ml",
+					"item": [
+						{
+							"name": "test",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"from\" : [ [ 2, 4, 22 ], [ 1, 3, 23 ], [ 1, 4, 24 ], [ 2, 3, 25 ] ],\n\t\"label\" : [ \"choice1\", \"choice2\", \"answer\" ],\n\t\"disease_id\" : 18\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:9999/ml",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9999",
+									"path": [
+										"ml"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test api",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"code\" : [2,3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:181/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "181",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "disease",
+			"item": [
+				{
+					"name": "create disease  | สร้างหัวข้อโรค",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"covid-19\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sv}}/disease",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"disease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get disease | ดึงหัวข้อโรคทั้งหมด",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/disease",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"disease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete disease | ลบ หัวข้อโรค",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"disease_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/disease",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"disease"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update disease | อัพเดท ข้อมูลหัวข้อโรค",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"disease_id\": 3,\r\n        \"name\": \"ท้องเสีย\",\r\n        \"status\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/disease",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"disease"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "question",
+			"item": [
+				{
+					"name": "get question | ดึงคำถามตามหัวข้อ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/question/18",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"question",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create question | สร้างคำถาม",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"disease_id\": 21,\r\n\t\"question\" :[ \r\n        {\r\n            \"title\": \"Q1่\",\r\n            \"list_id\": 1,\r\n            \"step\": \"1\"\r\n        },\r\n         {\r\n            \"title\": \"Q2\",\r\n            \"list_id\": 2,\r\n            \"step\": \"2\"\r\n        },\r\n        {\r\n        \t\"title\" : \"Q3\",\r\n        \t\"list_id\" : 3,\r\n        \t\"step\" :\"2\"\r\n        }\r\n     ],\r\n    \"choice\": [\r\n    \t\r\n\t    \t{\r\n\t\t        \"name\": \"Y\",\r\n\t\t        \"link\": \"2\",\r\n\t\t        \"list_id\": 1,\r\n\t\t        \"history\": \"Y\",\r\n\t\t        \"id\" : 1\r\n\t\t    },\r\n\t        {\r\n\t            \"name\": \"N\",\r\n\t            \"link\": \"3\",\r\n\t            \"list_id\": 1,\r\n\t            \"history\": \"N\",\r\n\t            \"id\" : 2\r\n\t        },\r\n    \r\n\t    \t{\r\n\t\t        \"name\": \"Y\",\r\n\t\t        \"link\": \"final\",\r\n\t\t        \"list_id\": 2,\r\n\t\t        \"history\": \"Y\",\r\n\t\t        \"id\" : 3\r\n\t\t    },\r\n\t        {\r\n\t            \"name\": \"N\",\r\n\t            \"link\": \"final\",\r\n\t            \"list_id\": 2,\r\n\t            \"history\": \"N\",\r\n\t            \"id\" : 4\r\n\t        },\r\n\t        {\r\n\t            \"name\": \"A\",\r\n\t            \"link\": \"final\",\r\n\t            \"list_id\": 2,\r\n\t            \"history\": \"N\",\r\n\t            \"id\" : 5\r\n\t        },\t{\r\n\t\t        \"name\": \"Y\",\r\n\t\t        \"link\": \"final\",\r\n\t\t        \"list_id\": 3,\r\n\t\t        \"history\": \"Y\",\r\n\t\t        \"id\" : 6\r\n\t\t    },\r\n\t        {\r\n\t            \"name\": \"N\",\r\n\t            \"link\": \"final\",\r\n\t            \"list_id\": 3,\r\n\t            \"history\": \"N\",\r\n\t            \"id\" : 7\r\n\t        }\r\n    \t\r\n\t]\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sv}}/question",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"question"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "conclude",
+			"item": [
+				{
+					"name": "get result | ดึงอาการ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"disease_id\": 1,\r\n    \"choice\": [197,201,205,210,219,223,225,227,229,231,232,234,237,238]\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sv}}/conclude",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"conclude"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "symptom",
+			"item": [
+				{
+					"name": "create symptom | เพิ่มข้อมูลอาการกับช้อย Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"disease_id\" : 30 ,\n\t\"symptom\" : { \n\t\t\"name\":  [\"dfgdfsssssssgf\"],\n\t\t\"suggestion\" : \"ssgghj\",\n\t\t\"choice\":[[2414,21278] ,[21247,6728] , [249,248] ,[252,678] ,[253,524311111]]\n\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lc}}/symptom",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"symptom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detele symptom | ลบอาการ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{lc}}/symptom/75",
+							"host": [
+								"{{lc}}"
+							],
+							"path": [
+								"symptom",
+								"75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by ID symptom | ตามไอดี",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sv}}/symptom/30",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"symptom",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all symptom | ดึงมาทั้งหมด",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sv}}/symptom/",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"symptom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "genera | สร้าง csv และรัน ML",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJlbWFpbCI6ImFkbWluQGQyeC5jb20iLCJhZGRyZXNzIjoiODAvMSBLYXRodSBQaHVrZXQgODMxMjAiLCJwaG9uZSI6IjA4MDg3MjQ1MjQiLCJmbmFtZSI6ImFkbWluIiwibG5hbWUiOiJkMngiLCJyb2xlIjoxLCJpYXQiOjE1ODM1ODg2NDksImV4cCI6MTU4Mzc2MTQ0OX0.Ea9DUy1zwH-hteL-2xCnJimArbcZJjc_X2oqwjPIR7o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"disease_id\" : 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sv}}/symptom/genera",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"symptom",
+								"genera"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "views",
+			"item": [
+				{
+					"name": "views | ดึงค่าและเพิ่มจำนวนคนเข้าเว็บ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sv}}/views",
+							"host": [
+								"{{sv}}"
+							],
+							"path": [
+								"views"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
